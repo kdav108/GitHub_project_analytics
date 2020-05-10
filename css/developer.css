@@ -1,0 +1,28 @@
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr.heading {
+  background-color: rgb(26, 107, 182); 
+  color: white;
+}
+
+.issues_table {
+    border-collapse: separate;
+}
+
+tr.zebra:nth-child(even) {
+    background-color: #d7e5fa; 
+}
+
+h1 {
+    background: rgb(26, 107, 182);
+    color: white;
+}
+
+a {
+    font-size: 17px;
+    vertical-align: middle;
+}
+
