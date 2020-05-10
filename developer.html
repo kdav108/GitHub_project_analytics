@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/developer.css">
+    <title> Developer Metrics </title>
+</head>
+
+<body>
+    
+    <h1 id="title" align="center"> </h1>
+
+    <!-- From MDL Lite (Lists) -->
+    <!-- Three Line List with secondary info and action -->
+    <style>
+    .demo-list-three {
+      width: 650px;
+    }
+    </style>
+
+    
+   <!-- <table align="center" width="600"> OLD UI
+        <tr class="heading">
+            <th><font size="4">
+                Top 5 Longest Open Issues
+            </font></th>
+        </tr>
+        <th>
+                Use this below to remove the indent on the list: <ul class="demo-list-three mdl-list"> </ul> 
+                <ul id="open_issues_list">
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">assignment</i>
+                            <span id="listTitle">Issue1 [Sample] </span>
+                            <span id = "list_content1" class="mdl-list__item-text-body">
+                                Time since the issue has been opened for
+                            </span>
+                        </span>
+                        <span class="mdl-list__item-secondary-content">
+                        </span>
+                    </li>
+
+                </ul>
+        </th>
+                
+
+    </table> -->
+
+    <table align="center" width="650" class="issues_table">
+        <thead>
+            <tr class="heading">
+                <th><font size="4"> 
+                    Top 5 Longest Open Issues
+                    </font></th>
+                <th width="13%"><font size="4">
+                    <i align="middle" class="material-icons mdl-list__item-avatar">schedule</i>
+                    </font></th>
+            </tr>
+        </thead>
+        <tbody id="open_issues_table">
+        </tbody>
+        
+    </table>
+    
+    <table align="center" width="650" class="issues_table">
+        <thead>
+            <tr class="heading">
+                <th><font size="4">
+                    Top 5 Most Popular Issues
+                    </font></th>
+                <th width="12%"><font size="4">
+                    <i align="middle" class="material-icons mdl-list__item-avatar">people</i>
+                    </font></th>
+            </tr>
+        </thead>
+        <tbody id="popular_issues_table">
+        </tbody>
+        
+    </table>
+    
+    <!-- Old UI
+    <table id="popular_issues_table" align="center" width="600">
+
+        <tr class="heading">
+            <th><font size="4">
+                Top 5 Most Popular Issues
+            </font></th>
+        </tr>
+        <td> 
+            <ul id="popular_issues_list">
+<!--                <li class="mdl-list__item mdl-list__item--three-line">
+<!--                    <span class="mdl-list__item-primary-content">
+                        <!-- The following sets the symbol to the left of the list point
+<!--
+                        <i class="material-icons mdl-list__item-avatar">people</i>
+                        <span id="listTitle"></span>
+-->
+<!--
+                        <span id = "list_content1" class="mdl-list__item-text-body">
+                            Popularity index
+                        </span>
+-->
+<!--                    </span>
+<!--                    <span class="mdl-list__item-secondary-content">
+<!--                    </span>
+<!--                </li>
+
+            </ul>
+        </td>
+    </table>
+    -->
+
+
+        <script src="./js/Classes.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/developer.js"></script>
+
+        <!-- For MDL -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

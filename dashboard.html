@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <title>Dashboard | Git Metrics</title>
+</head>
+
+<body>
+    <nav id="nav_bar">
+        <h2><a href="index.html">Git Metrics</a></h2>
+
+        <form action="dashboard.html" method="get" id="urlForm">
+            <input required type="text" name="repoURL" id="repoURL" placeholder="Repo URL">
+            <input type="submit" value="View Metrics">
+        </form>
+    </nav>
+    <main id="output">
+        <section class="errors hidden"></section>
+        <div class="grid grid-50-50">
+            <h2 align="center" class="repoTitle grid-item"></h2>
+            <div class="grid-item dogo hidden" style="text-align: right;">
+                <div id="number_open_issues">
+                    <label id="dog"><b>Open Issues</b></label>
+                </div>
+                <div style="margin-right: 80px;" id="actual_number_open_issues">
+                    <label id="label_total_open_issues"><b></b></label>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="subTopicTitle">
+        <h3 align="center">Burndown Chart: <span id="daterange"></span></h3>
+    </div>
+    <div id="burndown_wrapper" class="grid grid-80-20">
+        <div id="burndown_chart" class="burndownChart grid-item">
+            <canvas id="lineChart" width="400" height="200"></canvas>
+        </div>
+        <div class="grid-item">
+
+            <div class="datepickers">
+                <p>From</p>
+                <div id="datepickerstart" class="datepicker"></div><br>
+                <p>To</p>
+                <div id="datepickerend" class="datepicker"></div>
+            </div>
+        </div>
+    </div>
+    <div class="subTopicTitle">
+        <h3 align="center">Developer statistics</h3>
+    </div>
+    <!--    Table showing developer statistics-->
+    <table align="center">
+        <thead>
+            <tr>
+                <th class="dev_table_heading" bgcolor="#93baf5">
+                    <button class='button' onclick=sort_name_and_display_table()><b>Developer Names↕</b></button>
+                </th>
+                <th class="dev_table_heading" bgcolor="#93baf5">
+                    <button class='button' onclick=sort_open_and_display_table()><b>Number of Open Issues↕</b></button>
+                </th>
+                <th class="dev_table_heading" bgcolor="#93baf5">
+                    <button class='button' onclick=sort_closed_and_display_table()><b>Number of Closed
+                            Issues↕</b></button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="devNameIssuesCountTable"></tbody>
+    </table>
+    <div class="grid grid-50-50 tableButtons">
+        <button id="prevDevButton" class="grid-item" disabled onclick="prevDev()">Previous</button>
+        <button id="nextDevButton" class="grid-item" onclick="nextDev()">Next</button>
+    </div>
+    <hr>
+
+
+
+    <script src="./js/chart.min.js"></script>
+    <script src="./js/Classes.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/dashboard.js"></script>
+</body>
+
+</html>
